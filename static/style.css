@@ -1,0 +1,27 @@
+.login-form{
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.nav-item{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.form-group{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn{
+  margin-top: 20px;
+}
+
+.card{
+  margin: 20px;
+}
+
+.margin-fix{
+  margin-top:20px;
+}

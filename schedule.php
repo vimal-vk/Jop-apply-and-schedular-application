@@ -28,7 +28,7 @@
     <ul class="navbar-nav" style="margin-left:500px">
       <?php
         if (!isset($_COOKIE['user'])) {
-          header("Location: http://localhost/jobApp/login.php");
+          header("Location: login.php");
           echo '<li class="nav-item">
             <a class="nav-link" href="login.php">Login</a>
           </li>
@@ -43,7 +43,7 @@
             </li>';
           }
           else{
-            header("Location: http://localhost/jobApp/login.php");
+            header("Location: login.php");
           }
           echo '<li class="nav-item">
             <a class="nav-link" href="yourjobs.php">User jobs</a>
@@ -68,7 +68,7 @@
       $query = "update apply set status='$res' where id='$id'";
       mysqli_query($connect,$query);
       if($res=="Rejected"){
-        header("Location: http://localhost/jobApp/applied.php?id=".$redirect);
+        header("Location: applied.php?id=".$redirect);
       }
       else{
         $action = "actions/updateStatus.php?id=".$id."&res=".$res."&redirect=".$redirect;

@@ -1,6 +1,7 @@
 <?php
+  include '../database/connection.php';
   if (!isset($_COOKIE['user'])) {
-    header("Location: http://localhost/jobApp/login.php");
+    header("Location: ../login.php");
   }
   $response=$_POST;
   $company=$response["company"];
@@ -13,15 +14,14 @@
   $role=$response["role"];
   $salary=$response["salary"];
   $creator=explode(" ",$_COOKIE['user'])[0];
-   $connect = mysqli_connect("localhost:3306","root","","jobs");
-   $query="Insert into job(creator_id,company_name,reg_start_date,reg_end_date,experience,role,qualification,salary) values ('$creator','$company','$regStart','$regEnd','$experience','$role','$qualification','$salary');";
+  $query="Insert into job(creator_id,company_name,reg_start_date,reg_end_date,experience,role,qualification,salary) values ('$creator','$company','$regStart','$regEnd','$experience','$role','$qualification','$salary');";
   $res = mysqli_query($connect,$query);
   if(!$res){
-    header("Location: http://localhost/jobApp/createJob.php");
+    header("Location: ../createJob.php");
     echo mysqli_error($connect);
   }
   else{
-    header("Location: http://localhost/jobApp/yourjobs.php");
+    header("Location: ../yourjobs.php");
   }
 
 ?>

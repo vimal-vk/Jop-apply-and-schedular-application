@@ -56,7 +56,7 @@
   <div class="container" style="margin-top:30px">
     <?php
       if(!isset($_COOKIE['user'])){
-        header("Location: http://localhost/jobApp/login.php");
+        header("Location: login.php");
       }
       else{
         $cookieParts=explode(" ",$_COOKIE['user']);

@@ -28,7 +28,7 @@
     <ul class="navbar-nav" style="margin-left:500px">
       <?php
         if (!isset($_COOKIE['user'])) {
-          header("Location: http://localhost/jobApp/profile.php");
+          header("Location: profile.php");
           echo '<li class="nav-item">
             <a class="nav-link" href="login.php">Login</a>
           </li>
@@ -49,7 +49,7 @@
             </li>';
           }
           else{
-            header("Location: http://localhost/jobApp/profile.php");
+            header("Location: profile.php");
           }
         }
       ?>

@@ -34,7 +34,7 @@
           <li class="nav-item">
             <a class="nav-link" href="register.php">Register</a>
           </li>';
-          header("Location: http://localhost/jobApp/login.php");
+          header("Location: login.php");
         }
         else{
           if(explode(" ",$_COOKIE['user'])[1]=="interviewer"){
